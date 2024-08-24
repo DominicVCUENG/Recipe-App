@@ -1,0 +1,67 @@
+---
+title: "Recipe App Documentation"
+author: "Dominic Mason"
+format:
+  html:
+    embed-resources: true
+    theme: cosmo
+---
+
+* [LINK to GITHUB](https://github.com/DominicVCUENG/Recipe-App)
+
+# Overview
+
+This document describes the architecture and functionality of the Recipe App. The app allows users to view, filter, and submit recipes through a user-friendly interface. The backend is built with Django, while the frontend is created using React.js.
+
+## Features
+
+- **Recipe List:** Displays a list of recipes with the ability to filter by tags.
+- **Recipe Submission:** Users can submit new recipes for review, which are stored in a "Pending Recipes" table.
+- **Dynamic Content:** Clicking on a recipe expands the view to show detailed information, including a picture and ingredients.
+
+# Frontend
+
+The frontend is built with React.js and styled using CSS. It interacts with the backend API to fetch and display recipes. 
+
+## Components
+
+- **RecipeList:** Displays all the recipes retrieved from the backend. Users can filter recipes by selecting tags.
+- **AddRecipeForm:** Allows users to submit new recipes, which are sent to the backend for review.
+- **TagFilter** Provides checkboxes for users to filter recipes by tags.
+
+## Styling
+
+The app uses custom CSS for styling components. The design is clean and minimalistic, focusing on usability and simplicity.
+
+# Backend
+
+The backend is developed using Django, with SQLite as the database.
+
+## Models
+
+- **Recipe:** Stores the details of each recipe, including name, description, ingredients, and tags.
+- **PendingRecipe:** Stores the details of recipes submitted by users for review.
+
+## API Endpoints
+
+- **GET /api/recipes/**: Retrieves a list of all recipes.
+- **POST /api/pending-recipes/**: Allows users to submit a new recipe, which is stored in the "Pending Recipes" table.
+
+# 3-Tier AWS Architecture Diagram
+
+![AWS Architecture Diagram](RecipeAppDeploymentArchitecture.png)
+
+The deployment for the application follows a 3-tier architecture:
+
+1. **Frontend (AWS Amplify):** Hosts the React.js application.
+2. **Application (EC2):** Runs the Django backend.
+3. **Database (RDS):** Manages the SQLite database.
+
+# How to Use
+
+1. **View Recipes:** The homepage displays a list of recipes. You can filter the recipes by selecting tags.
+2. **Submit a Recipe:** Use the "Add New Recipe" form to submit a new recipe. It will be added to the "Pending Recipes" table for review.
+
+# Conclusion
+
+The Recipe App provides a simple and efficient way to explore and contribute to a collection of recipes. It is designed to be user-friendly, with a focus on performance and scalability.

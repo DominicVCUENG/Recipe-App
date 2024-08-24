@@ -1,0 +1,52 @@
+.recipe-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+li {
+    list-style: none;
+    border: 1px;
+    border-style: solid;
+    border-radius: .5rem;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0px 10px 10px #999999;
+    background-color: #F5F6EA;;
+    
+}
+
+li > * {
+    background: linear-gradient(to right, #670202, #532525);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+li:hover {
+    transform: scale(1.01);
+}
+
+ul {
+    padding-inline-start: 0;
+}
+
+.img-box {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+img {
+    align-self: center;
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+    img {
+      width: 100%;
+      height: auto;
+    }
+}
